@@ -14,36 +14,43 @@ Route::get('/hello', function () {
 
 // Group of routes for user-related actions
 Route::prefix('user')->group(function () {
-    // Route to display user profile
     Route::get('/profile', function () {
         return 'User  Profile Page';
     });
 
-    // Route to display user settings
     Route::get('/settings', function () {
         return 'User  Settings Page';
     });
 
-    // Route to display user activity
     Route::get('/activity', function () {
         return 'User  Activity Page';
     });
 });
 
-// Group of routes for blog-related actions
 Route::prefix('blog')->group(function () {
-    // Route to display all blog posts
     Route::get('/', function () {
         return 'All Blog Posts';
     });
 
-    // Route to display a specific blog post by ID
+    Route::get('/link-to-welcome', function () {
+        $link = url('/'); // This will point to the homepage (welcome page)
+        
+        return '<a href="' . $link . '">Go to Welcome Page</a>';
+    });
+
     Route::get('/{id}', function ($id) {
         return 'Blog Post ID: ' . $id;
     });
 
-    // Route to create a new blog post
     Route::get('/create', function () {
         return 'Create a New Blog Post';
     });
+
+    Route::get('post/{id}/{name}', function ($id, $name) {
+        return 'Blog Post ID: ' . $id . " Name: " . $name;
+    });
+
+    Route::get('post/example/exercise', function () {
+        return 'Blog Post with Example and Exercise';
+    })->name('post.example');
 });
