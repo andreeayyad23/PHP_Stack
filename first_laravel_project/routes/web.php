@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller; // Assuming this is your base controller
+use App\Http\Controllers\MiddleController; // Assuming this is your middle controller
+use App\Http\Controllers\UserController; // Assuming this is your user controller
 use Illuminate\Support\Facades\Route;
 
 // Route for the homepage that returns a view
@@ -27,6 +30,7 @@ Route::prefix('user')->group(function () {
     });
 });
 
+// Group of routes for blog-related actions
 Route::prefix('blog')->group(function () {
     Route::get('/', function () {
         return 'All Blog Posts';
@@ -34,7 +38,6 @@ Route::prefix('blog')->group(function () {
 
     Route::get('/link-to-welcome', function () {
         $link = url('/'); // This will point to the homepage (welcome page)
-        
         return '<a href="' . $link . '">Go to Welcome Page</a>';
     });
 
@@ -54,3 +57,14 @@ Route::prefix('blog')->group(function () {
         return 'Blog Post with Example and Exercise';
     })->name('post.example');
 });
+
+// Resource routes for users using UserController
+Route::resource('users', UserController::class);
+
+// Example of using MiddleController directly for a specific route
+Route::get('/use', [MiddleController::class, 'index']);
+
+Route::get('/contact/{id}', [MiddleController::class, 'contact']);
+Route::get('/news', [MiddleController::class, 'new']);
+
+?>
