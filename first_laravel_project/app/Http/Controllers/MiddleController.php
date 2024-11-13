@@ -47,6 +47,10 @@ class MiddleController extends Controller
     return view('contact', compact('id'));
     }
 
+    public function shows($id)
+    {
+        return view('contact', ['id' => $id]);
+    }
 
     protected function validateRequest(Request $request)
     {
