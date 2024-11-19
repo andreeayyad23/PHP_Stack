@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-
 <div class="form-container">
     <h2>Contact Information Form</h2>
     <form action="Forms/FormHandling.php" method="get">

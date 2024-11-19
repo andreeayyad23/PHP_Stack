@@ -29,7 +29,7 @@
                     <option value="divide">Division</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Calculate</button>
+            <button type="submit" class="btn btn-primary">Run</button>
         </form>
 
         <?php

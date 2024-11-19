@@ -128,4 +128,13 @@ Route::get('/delete-post/{id}', function ($id) {
     }
 });
 
+Route::get('/posts2', function () {
+    // Fetch all posts from the database using Eloquent
+    $posts = App\Models\Post::all();
+
+    // Pass the posts to the view
+    return view('posts.index', compact('posts'));
+});
+
+
 ?>

@@ -2,22 +2,26 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\User; // Import the User model
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Truncate users table to start fresh
+        DB::table('users')->truncate();
 
-        User::factory()->create([
-            'name' => 'Test User',
+        // Call your PostUserSeeder or other seeders
+        $this->call(PostUserSeeder::class);
+
+        // Create a user if it doesn't exist
+        User::firstOrCreate([
             'email' => 'test@example.com',
+        ], [
+            'name' => 'Test User',
+            'password' => bcrypt('password'), // You may need to specify a password
         ]);
     }
 }
