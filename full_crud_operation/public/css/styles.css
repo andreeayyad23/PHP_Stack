@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.dropdown-menu {
+    background-color: #0d6efd; /* Change the background color of the dropdown menu */
+}
+
+
+
+.navbar-nav .nav-link {
+    color: white; /* Change the text color of the navbar links */
+}
+
+
+.login-header {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333; 
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #0d6efd; 
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #e0e0e0; 
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item .btn {
+    background-color: #0d6efd; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s; 
+    cursor: pointer;
+}
+
+.nav-item .btn:hover {
+    background-color: #0056b3; 
+}
+
+.icon-blue {
+    color: white; 
+    margin-right: 10px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.social-buttons .btn {
+    margin: 5px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
