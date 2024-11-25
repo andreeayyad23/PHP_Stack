@@ -13,5 +13,10 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 require __DIR__.'/../vendor/autoload.php';
 
 // Bootstrap Laravel and handle the request...
-(require_once __DIR__.'/../bootstrap/app.php')
-    ->handleRequest(Request::capture());
+$app = require_once __DIR__.'/../bootstrap/app.php';
+$response = $app->handleRequest(Request::capture());
+$response->send();
+
+// Output a welcome message
+echo "Welcome to the User Management API! Use the /api/api.php endpoint.";
+exit;
