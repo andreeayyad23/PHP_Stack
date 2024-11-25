@@ -12,8 +12,8 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div style="color: blue;" class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">        
+    <div style="color: blue;" class="container">
         <a class="navbar-brand" href="{{ route('home') }}">Tourism App</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,12 +24,12 @@
                     @auth
                         <li class="nav-item">
                             <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
-                        </li>
+                        <!-- </li>
                         <li class="nav-item">
                             <a href="{{ route('destinations.create') }}" class="btn btn-primary me-2">
                                 <i class="fas fa-map-marker-alt"></i> Create Destination
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
